@@ -6,28 +6,28 @@ I have experimented with various model architectures and hyperparameters to achi
 
 ### Model1: CNN+RNN with Linear Fusion
 * Loss and Accuracy Plot
-![Model1](/othermodels/cnn_rnn_linear/loss_acc.png)
+![Model1](/othermodels/cnn_rnn_linear/loss_acc.png){:width="50%"}
 * Train Loss: 0.0027, Val Loss: 0.0593, Train Acc: 99.9125%, Val Acc: 98.8750%
 
 ### Model2: CNN+RNN with Attention Fusion
 * Loss and Accuracy Plot
-![Model2](/othermodels/cnn_rnn_attention/loss_acc.png)
+![Model2](/othermodels/cnn_rnn_attention/loss_acc.png){:width="50%"}
 * Train Loss: Train Loss: 0.0016, Val Loss: 0.0516, Train Acc: 99.9562%, Val Acc: 98.8750%
 
 ### Model3: CNN+Transformer with Linear Fusion
-![Model3](/othermodels/cnn_transformer_linear/loss_acc.png)
+![Model3](/othermodels/cnn_transformer_linear/loss_acc.png){:width="50%"}
 * Train Loss: Train Loss: 0.0009, Val Loss: 0.0560, Train Acc: 99.9813%, Val Acc: 98.8583%
 
 ### Model4: CNN+Transformer with Attention Fusion
-![Model4](/loss_acc.png)
+![Model4](/loss_acc.png){:width="50%"}
 * Train Loss: Train Loss: 0.0011, Val Loss: 0.0521, Train Acc: 99.9625%, Val Acc: 99.0000%
 
 These models are close in accuracy and converge very fast
 
 ## TSNE-Kmeans
 I used t-SNE to reduce the image and audio embedding data to 2-dimensional space. Color code each point by the corresponding label. Apply kmeans clustering with k = 10.
-![TSNE-Kmeans](/Image.png)
-![TSNE-Kmeans](/Audio.png)
+![TSNE-Kmeans](/Image.png){:width="50%"}
+![TSNE-Kmeans](/Audio.png){:width="50%"}
 
 For image data, the clustering results are quite clear, with almost each cluster corresponding to a separate region. The model is capable of features that distinguish different digits in image data. However, for the audio data, there is no clear one-to-one correspondence between clusters and real labels. This is due to the fact that the transformer model I’m using doesn’t capture the features of the audio data very well. So it leads to poor model performance. Another reason is that I hardly did any pre-processing on the audio data.
 
